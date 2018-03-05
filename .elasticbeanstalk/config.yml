@@ -1,7 +1,11 @@
 branch-defaults:
   master:
-    environment: null
+    environment: flask-env
     group_suffix: null
+environment-defaults:
+  flask-env:
+    branch: null
+    repository: null
 global:
   application_name: flask-recsys
   branch: null
