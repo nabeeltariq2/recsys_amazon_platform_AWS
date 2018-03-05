@@ -16,4 +16,3 @@ websocket-client
 Werkzeug
 WTForms
 scikit-learn
-scikit-surprise==1.0.4
