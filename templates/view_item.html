@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<link rel="stylesheet" href="/static/css/custom.css"/>
+
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h3><strong>Item Details</strong></h3>
+    <h54><strong>Title:</strong> {{item.title}}<br>
+    </h4>
+  </div>
+
+  <div class="panel-heading"><h3><strong>Item Cover</strong></h3>
+    <img src={{item.imgurl}}>
+  </div>
+
+
+
+  {% if session['user'] != None %}
+  <div class="panel-heading" id="update-div"><h3><strong>Rating Actions</strong></h3>
+
+
+
+  <form class="form-inline" action="/update_rating" method="POST">
+  <div class="control-group inline">
+    <label class="control-label"></label>
+    <div class="controls">
+      <label class="radio">
+        <input type="radio" name="rating" id="1" value="1">1</label>
+      <label class="radio">
+        <input type="radio" name="rating" id="2" value="2">2</label>
+            <label class="radio">
+        <input type="radio" name="rating" id="3" value="3">3</label>
+            <label class="radio">
+        <input type="radio" name="rating" id="4" value="4">4</label>
+            <label class="radio">
+        <input type="radio" name="rating" id="5" value="5">5</label>
+        <input type="hidden" name="item" value="{{item.id}}">
+
+    </div>
+  </div>
+  <button class="btn btn-success" id="update-button" type="submit">Update Rating For Item</button>
+  </form>
+
+
+</div>
+
+  <div class="panel-heading" id="update-div"><h3><strong>Cart Actions</strong></h3>
+
+
+    <div class="btn-group">
+      <form class="form-inline" action="/add_cart" method="POST">
+        <button class="btn btn-info" id="update-button" type="submit">Add item to Cart</button>
+        <input type="hidden" name="item" value="{{item.id}}">
+  </form>
+
+  <!-- <form class="form-inline" action="/delete_cart" method="POST"> -->
+  <!-- <button class="btn btn-warning" id="update-button" type="submit">Delete item From Cart</button> -->
+  <!-- <input type="hidden" name="item" value="{{item.id}}"> -->
+  <!-- </form> -->
+
+</div>
+
+</div>
+
+  {% else %}
+<!--
+  <div class="panel-heading">
+  <form class="form-inline" action="/add_rating" method="POST">
+      <h4 class="form-signin-heading"><strong>Add a new rating:</strong></h4>
+      <input type="rating" name="rating" class="form-control" placeholder="Rating" required autofocus />
+      <input type="hidden" name="item" value="{{item.id}}">
+      <button class="btn btn-primary" type="submit">Save</button>
+  </form>
+  </div> -->
+
+  {% endif %}
+
+
+
+  </div>
+
+
+  <!-- <form aclass="form-inline" action="/delete_item/<int:id>" method="POST">
+    <button class="btn danger" type="submit">Delete Item</button>
+  </form> -->
+
+
+
+{% endblock %}

@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<h1>Top 10 Recommended Items</h1>
+<div class="">
+</div>
+<b>How similar are these recommendations to your list preferences?</b>
+<div class="">
+</div>
+<b>Please rate on a scale of 0 to 5, 5 being most similar</b>
+<div class="panel panel-default">
+
+
+
+  <!-- Default panel contents -->
+
+      <form class="form-inline" action="/rate_recommendations" method="POST">
+        <div class="panel-heading">
+        <h3><strong><a href="/view_item/{{pred_1.id}}">{{pred_1.title}}<h6>click on title for more details</h6></a></strong></h3>
+        <!-- <td><a href="/view_item/{{pred_1.id}}">{{pred_1.title}}</a></td> -->
+        <h6> Item id:{{rec.pred_1}}:{{pred_1.id}}</h6>
+        <img src={{pred_1.imgurl}}>
+        <h4><strong>Please rate this item</strong></h4>
+        <div class="">
+        </div>
+      <div class="control-group inline">
+        <div class="controls">
+          <label class="radio">
+            <input type="radio" name="user_rating_1" id="1" value="1">1</label>
+          <label class="radio">
+            <input type="radio" name="user_rating_1" id="2" value="2">2</label>
+                <label class="radio">
+            <input type="radio" name="user_rating_1" id="3" value="3">3</label>
+                <label class="radio">
+            <input type="radio" name="user_rating_1" id="4" value="4">4</label>
+                <label class="radio">
+            <input type="radio" name="user_rating_1" id="5" value="5">5</label>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="panel-heading">
+    <h3><strong><a href="/view_item/{{pred_2.id}}">{{pred_2.title}}<h6>click on title for more details</h6></a></strong></h3>
+    <h6> Item id:{{rec.pred_2}}:{{pred_2.id}}</h6>
+    <img src={{pred_2.imgurl}}>
+    <h4><strong>Please rate this item</strong></h4>
+  <div class="">
+  </div>
+<div class="control-group inline">
+  <div class="controls">
+    <label class="radio">
+      <input type="radio" name="user_rating_2" id="1" value="1">1</label>
+    <label class="radio">
+      <input type="radio" name="user_rating_2" id="2" value="2">2</label>
+          <label class="radio">
+      <input type="radio" name="user_rating_2" id="3" value="3">3</label>
+          <label class="radio">
+      <input type="radio" name="user_rating_2" id="4" value="4">4</label>
+          <label class="radio">
+      <input type="radio" name="user_rating_2" id="5" value="5">5</label>
+  </div>
+</div>
+</div>
+
+
+<div class="panel-heading">
+
+  <h3><strong><a href="/view_item/{{pred_3.id}}">{{pred_3.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_3}}:{{pred_3.id}}</h6>
+  <img src={{pred_3.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_3" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_3" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_3" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_3" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_3" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+<div class="panel-heading">
+  <h3><strong><a href="/view_item/{{pred_4.id}}">{{pred_4.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_4}}:{{pred_4.id}}</h6>
+  <img src={{pred_4.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_4" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_4" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_4" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_4" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_4" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+
+<div class="panel-heading">
+
+  <h3><strong><a href="/view_item/{{pred_5.id}}">{{pred_5.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_5}}:{{pred_5.id}}</h6>
+  <img src={{pred_5.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_5" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_5" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_5" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_5" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_5" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+
+<div class="panel-heading">
+  <h3><strong><a href="/view_item/{{pred_6.id}}">{{pred_6.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_6}}:{{pred_6.id}}</h6>
+  <img src={{pred_6.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_6" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_6" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_6" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_6" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_6" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+
+<div class="panel-heading">
+  <h3><strong><a href="/view_item/{{pred_7.id}}">{{pred_7.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_7}}:{{pred_7.id}}</h6>
+  <img src={{pred_7.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_7" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_7" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_7" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_7" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_7" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+
+<div class="panel-heading">
+  <h3><strong><a href="/view_item/{{pred_8.id}}">{{pred_8.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_8}}:{{pred_8.id}}</h6>
+  <img src={{pred_8.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_8" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_8" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_8" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_8" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_8" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+<div class="panel-heading">
+  <h3><strong><a href="/view_item/{{pred_9.id}}">{{pred_9.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_9}}:{{pred_9.id}}</h6>
+  <img src={{pred_9.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_9" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_9" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_9" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_9" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_9" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+
+<div class="panel-heading">
+
+  <h3><strong><a href="/view_item/{{pred_10.id}}">{{pred_10.title}}<h6>click on title for more details</h6></a></strong></h3>
+  <h6> Item id:{{rec.pred_10}}:{{pred_10.id}}</h6>
+  <img src={{pred_10.imgurl}}>
+  <h4><strong>Please rate this item</strong></h4>
+<div class="">
+</div>
+<div class="control-group inline">
+<div class="controls">
+  <label class="radio">
+    <input type="radio" name="user_rating_10" id="1" value="1">1</label>
+  <label class="radio">
+    <input type="radio" name="user_rating_10" id="2" value="2">2</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_10" id="3" value="3">3</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_10" id="4" value="4">4</label>
+        <label class="radio">
+    <input type="radio" name="user_rating_10" id="5" value="5">5</label>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="panel panel-heading">
+
+<button class="btn btn-danger btn-lg" id="update-button" type="submit">Submit Recommendation Feedback</button>
+      </form>
+
+
+</div>
+
+
+{% endblock %}

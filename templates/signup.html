@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<form class="form-signin" method="POST">
+    <h3 class="form-signin-heading">Please Create an Account</h3>
+    <h4>All fields are required</h4>
+    <input type="first_name" name="first_name" class="form-control" placeholder="First Name" required autofocus />
+    <input type="last_name" name="last_name" class="form-control" placeholder="Last Name" required autofocus />
+    <input type="email" name="email" class="form-control" placeholder="Email Address" required autofocus />
+    <input type="password" name="password" class="form-control" placeholder="Password" required />
+    <input type="age" name="age" class="form-control" placeholder="Age(Numbers)" required/>
+    <input type="gender" name="gender" class="form-control" placeholder="Gender (M/F)" required/>
+    <input type="occupation" name="occupation" class="form-control" placeholder="Occupation" required/>
+    <input type="city" name="city" class="form-control" placeholder="City" required/>
+    <input type="state" name="state" class="form-control" placeholder="State/Province" required/>
+    <input type="country" name="country" class="form-control" placeholder="Country" required/>
+    <input type="zipcode" name="zipcode" class="form-control" placeholder="Zipcode(digits)" required/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+</form>
+
+{% endblock %}

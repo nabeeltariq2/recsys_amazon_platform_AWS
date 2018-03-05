@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h4><strong>User List</strong></h4></div>
+
+<ul class="pagination">
+
+  <li><a href="/user_list/{{back}}">&laquo;</a></li>
+
+    {% for page in range(1, (pages+2)) %}
+  <li><a href="/user_list/{{page}}">{{page}}</a></li>
+
+
+      {% endfor %}
+
+  <li><a href="/user_list/{{forward}}">&raquo;</a></li>
+</ul>
+  <!-- Table -->
+  <table class="table">
+
+
+<tr><th>User ID</th><th>Number of ratings</th></tr>
+
+    {% for user in users %}
+
+<tr><td><a href="/view_user/{{user.id}}">{{user.id}}</a></td><td>{{ user.ratings|length }}</td></tr>
+
+    {% endfor %}
+
+  </table>
+</div>
+
+{% endblock %}

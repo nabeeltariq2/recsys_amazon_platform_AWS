@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/static/css/style.css" />
+
+        <!-- clicky -->
+        <!-- <a title="Web Analytics" href="http://clicky.com/101098506"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101098506); }catch(e){}</script>
+        <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101098506ns.gif" /></p></noscript> -->
+
+
+        <!-- Google Tag Manager -->
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NCPPD3R');</script> -->
+        <!-- End Google Tag Manager -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113303111-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-113303111-1');
+        </script> -->
+
+
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//d26b395fwzu5fz.cloudfront.net/3.0.7/keen.min.js"></script>
+        <script type="text/javascript" src="common-web..min.js"></script> -->
+
+
+
+        <!-- <script type="application/javascript" src="scribe-analytics.js"></script> -->
+
+        <!-- <script type="text/javascript"> -->
+
+        <!-- var scribe = new Scribe({
+          tracker:          myTracker,
+          trackPageViews:   true,
+          trackClicks:      true,
+          trackHashChanges: true,
+          trackEngagement:  true,
+          trackLinkClicks:  true,
+          trackRedirects:   true,
+          trackSubmissions: true
+        });
+        </script> -->
+
+    </head>
+    <body>
+
+      <!-- Google Tag Manager (noscript) -->
+      <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCPPD3R" -->
+      <!-- height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+      <!-- End Google Tag Manager (noscript) -->
+
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- <a class="navbar-brand" href="/recommend_compute/{{session['user']}}">Calculate & Show Recommendations</a> -->
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if session["user"] %}
+                            <li><a href="/overall_feedback">Feedback</a></li>
+                            <li><a href="/view_recommendations/{{session['user']}}">Recommendation History</a></li>
+                            <!-- <li><a href="/add_item/{{session['user']}}">Feedback</a></li> -->
+                            <li><a href="/recommend_compute/{{session['user']}}">Calculate & Show Recommendations</a></li>
+                            <!-- <li><a href="/user_list/"> {{"User List"}} </a></li> -->
+                            <!-- <li><a href="/item_list/">Item List</a></li> -->
+                            <!-- <li><a href="/add_item/{{session['user']}}">Add Item</a></li> -->
+                            <li><a href="/view_cart/{{session['user']}}">My Shopping Cart</a></li>
+                            <li><a href="/view_user/{{session['user']}}">My Marketplace/Items</a></li>
+                            <li><a href="/logout"> {{"Log Out"}} </a></li>
+                        {% else %}
+                            <li><a href="/login">{{"Log In"}}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <ul class="flashes">
+                <li>{{message}}</li>
+            </ul>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

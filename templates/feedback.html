@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<h1>Overall Feedback</h1>
+<div class="">
+</div>
+<b>Please complete the following form, based on your overall impressions/conclusions.</b>
+<div class="">
+</div>
+<b>Please rate on a scale of 0 to 5, 5 being highest.</b>
+<div class="panel panel-default">
+
+  <form class="form-inline" action="/overall_feedback" method="POST">
+
+
+  <div class="panel-heading">
+  <h3>In your opinion, how <strong>novel</strong> were the recommendations on an overall level?</h3>
+  <div class="">
+  </div>
+<div class="control-group inline">
+  <div class="controls">
+    <label class="radio">
+      <input type="radio" name="novelty" id="1" value="1">1</label>
+    <label class="radio">
+      <input type="radio" name="novelty" id="2" value="2">2</label>
+          <label class="radio">
+      <input type="radio" name="novelty" id="3" value="3">3</label>
+          <label class="radio">
+      <input type="radio" name="novelty" id="4" value="4">4</label>
+          <label class="radio">
+      <input type="radio" name="novelty" id="5" value="5">5</label>
+  </div>
+</div>
+</div>
+
+  <!-- Default panel contents -->
+
+        <div class="panel-heading">
+        <h3>Did you come across any <strong>unexpected</strong> results?Please rate the unexpectedness level for the recommendations.</h3>
+        <div class="">
+        </div>
+      <div class="control-group inline">
+        <div class="controls">
+          <label class="radio">
+            <input type="radio" name="unexpectedness" id="1" value="1">1</label>
+          <label class="radio">
+            <input type="radio" name="unexpectedness" id="2" value="2">2</label>
+                <label class="radio">
+            <input type="radio" name="unexpectedness" id="3" value="3">3</label>
+                <label class="radio">
+            <input type="radio" name="unexpectedness" id="4" value="4">4</label>
+                <label class="radio">
+            <input type="radio" name="unexpectedness" id="5" value="5">5</label>
+        </div>
+      </div>
+  </div>
+
+
+
+<div class="panel panel-heading">
+
+<button class="btn btn-success btn-lg" id="update-button" type="submit">Submit Overall Feedback</button>
+      </form>
+
+
+</div>
+
+
+{% endblock %}

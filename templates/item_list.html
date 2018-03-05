@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="panel panel-default">
+
+  <div class="panel-heading"><h4><strong>Item List</strong></h4></div>
+
+  <table class="table">
+
+
+<tr><th>Item ID</th><th>Item Name</th><th>Number of ratings</th></tr>
+
+    {% for user in users %}
+
+<tr><td>{{user.id}}</td><td>{{user.title}}</td><td>{{user.ratings|length}}</td></tr>
+
+    {% endfor %}
+
+  </table>
+</div>
+
+
+
+
+
+{% endblock %}
