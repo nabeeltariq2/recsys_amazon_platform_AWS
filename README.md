@@ -3,10 +3,11 @@
 ## A recommender systems platform for running online user experiments. Key features and integrations are as follows:
 
 ## Features
+Users can go on the website, rate products and get recommendations
 The base platform is based in Flask-Python. MYSQL integrations are handled through SQLAlchemy.
 The algorithms are sourced from the surprise library(). Metrics available in MYSQL database.
-Bootstrap template is used for rendering html pages
-The Facebook Planout platform is used to randomize algorithm runs for each instance(). Metrics available in MYSQL database.
+Bootstrap template is used for rendering html pages. The frontend is based in HTML, CSS, Javascript.
+The Facebook Planout platform for A/B Testing, and is used to randomize algorithm runs for each instance(). Metrics available in MYSQL database.
 Advanced Tracking metrics eg user clicks, time on webpages also integrated and available in MYSQL database
 Currently amazon datasets are used, but any ratings dataset can be easily incorporated
 
@@ -18,5 +19,6 @@ install packages in requirements.txt
 create database model - python model.py
 add data - python seed.py (based on your data)
 run app - python application.py
+
 
 ### Citations necessary for any usage of this platform.
