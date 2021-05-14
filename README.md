@@ -19,6 +19,3 @@ install packages in requirements.txt
 create database model - python model.py
 add data - python seed.py (based on your data)
 run app - python application.py
-
-
-### Citations necessary for any usage of this platform.
